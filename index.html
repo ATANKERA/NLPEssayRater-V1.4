@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Writer's Are HomeGrown</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      textarea {
+    width: 500px;
+    height: 100px;
+}
+  </style>
+
+
+  <!-- TODO: Missing CoffeeScript 2 -->
+
+  <script type="text/javascript">//<![CDATA[
+
+window.onload=function(){
+
+var myText = document.getElementById("myText");
+var charNoSpacesCount = document.getElementById("charNoSpacesCount");
+var actualWordCount = document.getElementById("actualWordCount");
+var charCount = document.getElementById("charCount");
+var additiveDir = document.getElementById("additiveDir");
+var sequentialDir = document.getElementById("sequentialDir");
+var causalDir = document.getElementById("causalDir");
+var oppositionalDir = document.getElementById("oppositionalDir");
+var rating = document.getElementById("rating");
+
+myText.addEventListener("keyup",function(){
+    var characters = myText.value.split('');
+    charCount.innerText = characters.length;
+    charNoSpacesCount.innerText = characters.filter( item => {
+        return (item != ' ');
+    }).length;
+  });
+
+myText.addEventListener("keyup",function(){
+    var words = myText.value.split(' ');
+    actualWordCount.innerText = words.length;
+  });
+
+myText.addEventListener("keyup",function(){
+    var indicators = myText.value.split(' '); /* Must Split At more special Chars */
+
+    //Additive
+    additiveDir.innerText = indicators.length * 3 /* Change to # of Filters */
+    - indicators.filter( item => {
+        return (item != 'and');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'or');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'also');
+    }).length;
+
+    //Sequential
+    sequentialDir.innerText = indicators.length * 4 /* Change to # of Filters */
+    - indicators.filter( item => {
+        return (item != 'next');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'then');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'Next');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'Then');
+    }).length;
+
+    //Causal
+    causalDir.innerText = indicators.length * 4 /* Change to # of Filters */
+    - indicators.filter( item => {
+        return (item != 'since');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'because');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'Since');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'Because');
+    }).length;
+
+    //Oppostional
+    oppositionalDir.innerText = indicators.length * 4 /* Change to # of Filters */
+    - indicators.filter( item => {
+        return (item != 'but');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'yet');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'But');
+    }).length
+    - indicators.filter( item => {
+        return (item != 'Yet');
+    }).length;
+
+  });
+
+myText.addEventListener("keyup",function(){
+  if (charNoSpacesCount.innerText == 0) {
+    rating.innerText = "Running Test...";
+    actualWordCount.innerText = 0;
+  } else if (additiveDir.innerText + sequentialDir.innerText <= causalDir.innerText) {
+    if (additiveDir.innerText + sequentialDir.innerText <= oppositionalDir.innerText) {
+    rating.innerText = "This Text Was Grown with Care Right on the Ground and Soil beneath your feet, With Nurture and Attentiveness, VERY FRESH! : ) ";
+    }
+  } else if (additiveDir.innerText < causalDir.innerText){
+      rating.innerText = "This Text Was Grown Far Away, Maybe in The Nearest Country, And is in Decent Condition, Not The Best, Not the Worst : | ";
+  } else if (additiveDir.innerText < oppositionalDir.innerText){
+     rating.innerText = "This Text Was Grown Far Away, Maybe in The Nearest Country, And is in Decent Condition, Not The Best, Not the Worst : | ";
+  } else {
+    rating.innerText = "This Text Was Grown In A Land Far, Far Away .... I don't think it was from this Planet, It seems Wilted and Damaged : ( ";
+  }
+  });
+
+}
+
+  //]]></script>
+
+</head>
+<body>
+<p>
+This is built from the ashes of Dr. Mullen's breakdown over the despicable and stigmatizing rating conventions used by Helen, author of The <a href="http://www.writersdiet.com">Writer's Diet</a>. Her obnoxious shaming schemes need to be ended and transformed into an effective societally inclusive tool, which this project seeks to do. So use this tool instead (if you want to, otherwise the former is embedded as a hyperlink). The Text Box Can be Resized to fit your Needs.
+</p>
+<p>
+Directional Indicators For The Wind!
+</p>
+<!-- Currently this keeps track of characters and words inputted in a textarea -->
+</p>
+<p>
+*Need to port to web/cloud server <!-- Add Rating This text was grown here, grown 1000 miles away, grown too far : ( -->
+</p>
+<p>
+Check out some other stuff here <a href="http://www.ATANKERA.weebly.com">   > Promo < </a>
+</p>
+
+<p>
+<textarea id="myText" height="500"></textarea>
+</p>
+<p>
+<span id="charNoSpacesCount">0</span> Characters W/O Spaces
+</p>
+<p>
+<span id="charCount">0</span> Characters Incl. Spaces
+</p>
+<p>
+<span id="actualWordCount">0</span> Words
+</p>
+<p>
+<span id="additiveDir">0</span> Additive Directional Indicators - Excessive Use Sounds Listy, Generally Less Sophisticated
+</p>
+<p>
+<span id="sequentialDir">0</span> Sequential Directional Indicators - Excessive Use Sounds Like an Outline not an Academic Paper
+</p>
+<p>
+<span id="causalDir">0</span> Causal Directional Indicators - Advanced Writing Technique, Held in High Regard. Shows Progression of Thought
+</p>
+<p>
+<span id="oppositionalDir">0</span> Oppositional Directional Indicators - Advanced Writing Technique. Shows Consideration in Thought
+</p>
+<p>
+How Close to Home Was Your Writing?:    : <span id="rating">Running Test....</span>
+</p>
+
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "bx26nato"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+</body>
+</html>
