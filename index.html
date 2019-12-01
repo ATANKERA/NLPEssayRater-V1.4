@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html>
+
+
+<!-- #################################################################################################-->
+<!-- ##########################################    Head    ###########################################-->
+<!-- #################################################################################################-->
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <title>Writer's Are HomeGrown</title>
@@ -19,10 +24,30 @@
 
 
   <style id="compiled-css" type="text/css">
-      textarea {
-    width: 500px;
-    height: 100px;
-}
+    textarea {
+      width: 500px;
+      height: 100px;
+    }
+
+    h2 {
+      color: green;
+      margin: 20px;
+      text-align: center;
+      background: pink;
+    }
+
+    p {
+      color: #222244;
+      text-align: center;
+      margin: 20px;
+      margin-left: 75px;
+      margin-right: 75px;
+    }
+
+    p2 {
+      color: limegreen;
+      font-weight: 900;
+    }
   </style>
 
 
@@ -139,9 +164,16 @@ myText.addEventListener("keyup",function(){
   //]]></script>
 
 </head>
+
+<!-- #################################################################################################-->
+<!-- ##########################################    Body    ###########################################-->
+<!-- #################################################################################################-->
 <body>
+    <!-- Easy JavaScript # 32 - Character Count -->
+<!-- Supplemental code based on comment in https://www.youtube.com/watch?v=pGdNiYzth44 -->
+<h2>The Best Writers are HomeGrown </h2>
 <p>
-This is built from the ashes of  the despicable and stigmatizing rating conventions used by Helen, author of The <a href="http://www.writersdiet.com">Writer's Diet</a>. Her obnoxious shaming schemes need to be ended and transformed into an effective societally inclusive tool, which this project seeks to do. So use this tool instead. The Text Box Can be Resized to fit your needs.
+This is built from the ashes of the despicable and stigmatizing rating conventions used by Helen, author of The <a href="http://www.writersdiet.com">Writer's Diet</a>. Her obnoxious shaming schemes need to be ended and transformed into an effective societally inclusive tool, which this project seeks to do. So use this tool instead. The Text Box Can be Resized to fit your needs.
 </p>
 <p>
 Directional Indicators For The Wind!
@@ -149,7 +181,7 @@ Directional Indicators For The Wind!
 <!-- Currently this keeps track of characters and words inputted in a textarea -->
 </p>
 <p>
-<!-- *Need to port to web/cloud server Add Rating This text was grown here, grown 1000 miles away, grown too far : ( -->
+<!-- *Need to port to web/cloud server  Add Rating This text was grown here, grown 1000 miles away, grown too far : ( -->
 </p>
 <p>
 Check out some other stuff here <a href="http://www.ATANKERA.weebly.com">   > Promo < </a>
@@ -167,21 +199,30 @@ Check out some other stuff here <a href="http://www.ATANKERA.weebly.com">   > Pr
 <p>
 <span id="actualWordCount">0</span> Words
 </p>
-<p>
-<span id="additiveDir">0</span> Additive Directional Indicators - Excessive Use Sounds Listy, Generally Less Sophisticated
-</p>
-<p>
-<span id="sequentialDir">0</span> Sequential Directional Indicators - Excessive Use Sounds Like an Outline not an Academic Paper
-</p>
-<p>
-<span id="causalDir">0</span> Causal Directional Indicators - Advanced Writing Technique, Held in High Regard. Shows Progression of Thought
-</p>
-<p>
-<span id="oppositionalDir">0</span> Oppositional Directional Indicators - Advanced Writing Technique. Shows Consideration in Thought
-</p>
-<p>
-How Close to Home Was Your Writing?:    : <span id="rating">Running Test....</span>
-</p>
+<p2>
+Additive Directional Indicators - Excessive Use Sounds Listy, Generally Less Sophisticated: <span id="additiveDir">0</span>
+<br/>
+</p2>
+<p2>
+  <br/>
+ Sequential Directional Indicators - Excessive Use Sounds Like an Outline not an Academic Paper: <span id="sequentialDir">0  </span>
+  <br/>
+</p2>
+<p2>
+  <br/>
+  Causal Directional Indicators - Advanced Writing Technique. Shows Progression of Thought: <span id="causalDir">0</span>
+  <br/>
+</p2>
+<p2>
+  <br/>
+  Oppositional Directional Indicators - Advanced Writing Technique. Shows Consideration in Thought: <span id="oppositionalDir">0</span>
+  <br/>
+</p2>
+<p2>
+  <br/>
+  How Close to Home Was Your Writing?:    : <span id="rating">Running Test....</span>
+  <br/>
+</p2>
 
 
   <script>
